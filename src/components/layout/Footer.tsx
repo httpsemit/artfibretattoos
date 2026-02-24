@@ -112,7 +112,18 @@ export function Footer() {
             <p className="text-gray-400 text-sm">
               © 2026 Artfibre Tattoos & Art Studio. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <p className="text-gray-400 text-sm">
+              Developed by{' '}
+              <a 
+                href="https://shivxtech.online" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-accent hover:text-accent/80 transition-colors font-medium"
+              >
+                ShivxTech
+              </a>
+            </p>
+            <div className="flex space-x-6">
               <Link href="/privacy" className="text-gray-400 hover:text-accent text-sm transition-colors">
                 Privacy Policy
               </Link>
