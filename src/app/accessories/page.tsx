@@ -151,11 +151,6 @@ export default function AccessoriesPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/tattoo/portfolio">
-                  View Tattoo Portfolio
-                </Link>
-              </Button>
               <Button variant="glass" size="lg" onClick={() => {
                 const message = encodeURIComponent(
                   'Hi! I\'m interested in accessories from Artfibre. Can you show me your available collection?'
