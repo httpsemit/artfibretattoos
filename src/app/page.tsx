@@ -1,8 +1,10 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { Star, ArrowRight } from 'lucide-react';
+'use client';
+
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { ArrowRight, Brush, Award, Palette, Star } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -167,6 +169,203 @@ export default function Home() {
               <Link href="/tattoo/portfolio">
                 View Full Portfolio
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Accessories Preview */}
+      <section className="py-20 bg-muted/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Artfibre Accessories
+            </h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              Discover our curated collection of traditional Japanese jewelry, malas, chains, and accessories. 
+              Each piece is handcrafted with artistic precision.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Featured Accessory 1 */}
+            <Card className="group hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent-secondary/20 rounded-t-lg overflow-hidden">
+                    <img
+                      src="/images/tattoos/artfibre_tattoos_14041205_170659106.jpg"
+                      alt="Traditional Japanese Mala"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute top-2 right-2 bg-accent text-white px-3 py-1 rounded-full text-xs font-medium">
+                    Featured
+                  </div>
+                </div>
+                
+                <div className="p-4">
+                  <div className="mb-2">
+                    <span className="text-xs text-accent font-medium">Mala</span>
+                    <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                      Traditional Japanese Mala
+                    </h3>
+                  </div>
+                  
+                  <p className="text-sm text-muted mb-3">
+                    Handcrafted Buddhist prayer beads
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-xl font-bold text-foreground">
+                        ₹2,999
+                      </span>
+                    </div>
+                    <Button 
+                      size="sm" 
+                      variant="glass"
+                      onClick={() => {
+                        const message = encodeURIComponent(
+                          'Hi! I\'m interested in the Traditional Japanese Mala (₹2999) from Artfibre Accessories. Can you provide more details about this product?'
+                        );
+                        const whatsappUrl = `https://wa.me/919678449790?text=${message}`;
+                        window.open(whatsappUrl, '_blank');
+                      }}
+                    >
+                      Inquire
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Featured Accessory 2 */}
+            <Card className="group hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent-secondary/20 rounded-t-lg overflow-hidden">
+                    <img
+                      src="/images/tattoos/artfibre_tattoos_14041205_170659610.jpg"
+                      alt="Silver Chain Necklace"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                
+                <div className="p-4">
+                  <div className="mb-2">
+                    <span className="text-xs text-accent font-medium">Chains</span>
+                    <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                      Silver Chain Necklace
+                    </h3>
+                  </div>
+                  
+                  <p className="text-sm text-muted mb-3">
+                    Sterling silver with Japanese pendant
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-xl font-bold text-foreground">
+                        ₹4,999
+                      </span>
+                    </div>
+                    <Button 
+                      size="sm" 
+                      variant="glass"
+                      onClick={() => {
+                        const message = encodeURIComponent(
+                          'Hi! I\'m interested in the Silver Chain Necklace (₹4999) from Artfibre Accessories. Can you provide more details about this product?'
+                        );
+                        const whatsappUrl = `https://wa.me/919678449790?text=${message}`;
+                        window.open(whatsappUrl, '_blank');
+                      }}
+                    >
+                      Inquire
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Featured Accessory 3 */}
+            <Card className="group hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent-secondary/20 rounded-t-lg overflow-hidden">
+                    <img
+                      src="/images/tattoos/artfibre_tattoos_14041205_170700072.jpg"
+                      alt="Tribal Bracelet Set"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                
+                <div className="p-4">
+                  <div className="mb-2">
+                    <span className="text-xs text-accent font-medium">Bracelets</span>
+                    <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                      Tribal Bracelet Set
+                    </h3>
+                  </div>
+                  
+                  <p className="text-sm text-muted mb-3">
+                    Set of 3 tribal-style bracelets
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-xl font-bold text-foreground">
+                        ₹1,899
+                      </span>
+                    </div>
+                    <Button 
+                      size="sm" 
+                      variant="glass"
+                      onClick={() => {
+                        const message = encodeURIComponent(
+                          'Hi! I\'m interested in the Tribal Bracelet Set (₹1899) from Artfibre Accessories. Can you provide more details about this product?'
+                        );
+                        const whatsappUrl = `https://wa.me/919678449790?text=${message}`;
+                        window.open(whatsappUrl, '_blank');
+                      }}
+                    >
+                      Inquire
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* View All Card */}
+            <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer" onClick={() => window.location.href = '/accessories'}>
+              <CardContent className="p-0">
+                <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent-secondary/20 rounded-t-lg overflow-hidden flex items-center justify-center">
+                  <div className="text-center space-y-4 p-6">
+                    <div className="h-16 w-16 bg-accent/20 rounded-full mx-auto flex items-center justify-center">
+                      <span className="text-2xl">📿</span>
+                    </div>
+                    <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                      View All Accessories
+                    </h3>
+                    <p className="text-sm text-muted">
+                      Explore our complete collection
+                    </p>
+                    <Button variant="outline" size="sm">
+                      Browse Shop
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button variant="glass" size="lg" asChild>
+              <Link href="/accessories">
+                Explore Full Accessories Collection
               </Link>
             </Button>
           </div>
