@@ -12,6 +12,7 @@ export function Header() {
     { name: 'Home', href: '/' },
     { name: 'Tattoo Studio', href: '/tattoo' },
     { name: 'Art & Paintings', href: '/art' },
+    { name: 'Accessories', href: '/accessories' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];

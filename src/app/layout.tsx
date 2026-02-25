@@ -1,46 +1,45 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { CanvasBackground } from '@/components/ui/CanvasBackground';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Artfibre Tattoos & Art Studio | North Lakhimpur, Assam",
-  description: "Premium tattoo studio and Japanese traditional art gallery in North Lakhimpur, Assam. Specializing in freehand tattoos, tribal designs, and original Japanese paintings.",
-  keywords: ["tattoo studio", "North Lakhimpur", "Assam", "Japanese art", "freehand tattoos", "tribal tattoos"],
+  title: 'Artfibre - Premium Tattoo Studio & Japanese Art Gallery',
+  description: 'North Lakhimpur\'s premier tattoo studio specializing in Japanese traditional art, tribal designs, and custom tattoos. Book your session today.',
+  keywords: ['tattoo', 'japanese art', 'north lakhimpur', 'assam', 'tattoo studio', 'custom tattoos', 'tribal tattoos'],
   openGraph: {
-    title: "Artfibre Tattoos & Art Studio",
-    description: "Premium tattoo studio and Japanese traditional art gallery in North Lakhimpur, Assam",
-    type: "website",
-    locale: "en_IN",
+    title: 'Artfibre - Premium Tattoo Studio & Japanese Art Gallery',
+    description: 'Specializing in Japanese traditional art, tribal designs, and custom tattoos in North Lakhimpur, Assam.',
+    url: 'https://artfibre.in',
+    siteName: 'Artfibre Tattoos & Art Studio',
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Artfibre - Premium Tattoo Studio',
+    description: 'Specializing in Japanese traditional art and custom tattoos',
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
-      >
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+      <body className={`${inter.className} min-h-screen bg-background text-foreground`}>
+        <CanvasBackground />
+        <div className="relative z-10">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

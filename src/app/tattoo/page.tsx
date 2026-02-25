@@ -46,7 +46,7 @@ export default function TattooStudioPage() {
               </div>
             </div>
             
-            <Button size="lg" asChild>
+            <Button variant="glass" size="lg" asChild>
               <Link href="/tattoo/book">
                 Book a Consultation
               </Link>

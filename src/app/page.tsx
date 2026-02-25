@@ -48,10 +48,18 @@ export default function Home() {
             
             {/* Right Side - Visual Placeholder */}
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent-secondary/20 rounded-2xl flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="h-24 w-24 bg-accent rounded-full mx-auto" />
-                  <p className="text-muted">Featured Artwork Gallery</p>
+              <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent-secondary/20 rounded-2xl overflow-hidden">
+                <div className="relative w-full h-full">
+                  <img
+                    src="/images/tattoos/dhrba_body_art_14041205_170705993.jpg"
+                    alt="Featured Japanese Tattoo Artwork"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-white text-lg font-medium">Featured Artwork Gallery</p>
+                    <p className="text-white/80 text-sm">Japanese Traditional Style</p>
+                  </div>
                 </div>
               </div>
             </div>
